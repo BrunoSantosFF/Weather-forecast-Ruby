@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "3.0.2"
 
+gem 'hg-weather'
+
 gem 'httparty'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
