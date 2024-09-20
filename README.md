@@ -23,3 +23,4 @@ name_city is name of place
 ```
 http://localhost:3000/weather/{name_city}
 ```
+write something city for request API

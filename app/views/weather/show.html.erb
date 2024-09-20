@@ -1,0 +1,11 @@
+<h1>Clima para <%= params[:city] %></h1>
+
+<% if @weather %>
+  <p><strong>Condição atual:</strong> <%= @weather['description'] %></p>
+  <p><strong>Temperatura:</strong> <%= @weather['temp'] %> °C</p>
+  <p><strong>Sensação térmica:</strong> <%= @weather['thermal_sensation'] %> °C</p>
+  <p><strong>Umidade:</strong> <%= @weather['humidity'] %>%</p>
+  <p><strong>Velocidade do vento:</strong> <%= @weather['wind_speedy'] %></p>
+<% else %>
+  <p>Não foi possível obter informações de clima para esta cidade.</p>
+<% end %>
