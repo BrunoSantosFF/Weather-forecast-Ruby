@@ -1,10 +1,25 @@
-# README
-comands
+# weather forecast
 
+The project is about a API  weather forecast using technology Ruby on Rails (framework)
+
+## initial commands
+
+```
 rails new project
+```
 
-rails generate controller ApiConsumer
+## Create file for api request
+```
+rails generate controller Weather
+```
 
+## Compile server
+```
 rails server
+```
 
-http://localhost:3000/api_consumer/show
+## View
+name_city is name of place
+```
+http://localhost:3000/weather/{name_city}
+```
