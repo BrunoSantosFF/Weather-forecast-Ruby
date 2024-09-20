@@ -1,0 +1,8 @@
+<% if @user_info %>
+  <h1>Informações do Usuário:</h1>
+  <p><strong>Nome:</strong> <%= @user_info['name'] %></p>
+  <p><strong>Bio:</strong> <%= @user_info['bio'] %></p>
+  <p><strong>Localização:</strong> <%= @user_info['location'] %></p>
+<% else %>
+  <p><%= @error_message %></p>
+<% end %>
