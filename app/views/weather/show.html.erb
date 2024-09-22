@@ -17,8 +17,8 @@
     <h2 class="city"> <%= @weather['city'] %> </h2>
     <nav>
       <ul>
-        <li><a id="button-snow" class="active"><i class="wi wi-snow"></i></a></li>
-        <li><a id="button-wind"><i class="wi wi-strong-wind"></i></a></li>
+        <li><a id="button-snow"><i class="wi wi-snow"></i></a></li>
+        <li><a id="button-wind" class="active"><i class="wi wi-strong-wind"></i></a></li>
         <li><a id="button-rain"><i class="wi wi-rain"></i></a></li>
         <li><a id="button-thunder"><i class="wi wi-lightning"></i></a></li>
         <li><a id="button-sun"><i class="wi wi-day-sunny"></i></a></li>
@@ -167,7 +167,9 @@ function init()
 	// ☀️ set initial weather
 
 	TweenMax.set(sunburst.node, {opacity: 0})
-	changeWeather(weather[0]);
+	var condition = '<%= @condition %>';
+	var initialWeather = weather.filter(function(w){ return w.type == condition })[0];
+	changeWeather(initialWeather);
 }
 
 function onResize()
