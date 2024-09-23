@@ -1,0 +1,74 @@
+body {
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+  width: 100%; 
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  padding: 10px;
+  border-radius: 5px;
+  width: 60%;
+  float: right;
+}
+
+
+.btn {
+  width: 60%;
+  padding: 10px;
+  background-color: #94ae23;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.btn:hover {
+  background-color: #9cb669;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-image: url('sol.png'); /* Altere para o nome da sua imagem */
+  background-size: cover; /* Para cobrir toda a área */
+  background-repeat: no-repeat; /* Para não repetir a imagem */
+  height: 100vh; /* Ou qualquer altura desejada */
+  width: 100%; /* Ou qualquer largura desejada */
+  margin: 0;
+  
+}
+
+.container-main {
+  
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(225, 134, 43);
+  border-radius: 8px;
+  width: 320px;
+  height: 320px;
+  background: rgba(0, 0, 0, 0.4); /* Fundo escuro com 40% de opacidade */
+}
+
+.container-main div {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.div-btn {
+  display: flex;
+  justify-content: center;
+}
