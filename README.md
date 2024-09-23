@@ -15,6 +15,7 @@ rails generate controller Weather
 
 ## Compile server
 ```
+bundle install
 rails server
 ```
 
