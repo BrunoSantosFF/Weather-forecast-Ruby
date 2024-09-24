@@ -6,7 +6,7 @@
       user = User.find_by(email: params[:email])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        redirect_to weather_path(city: 'vitoria') # ou redirecione para onde precisar
+        redirect_to weather_new_path  # Redireciona para a ação new do WeatherController
       else
         flash.now[:alert] = 'Email ou senha inválidos'
         render :new

@@ -4,14 +4,14 @@
   <form id="weather-form" action="<%= weather_path(city: '') %>" method="get" onsubmit="submitForm(event)">
     <div class="field">
       <div class="search-bar">
-        <input type="text" id="city" name="city" placeholder="Cidade">
+        <input type="text" id="city" name="city" placeholder="Cidade" required>
         <button type="submit" class="search-button">
-            <i class="fa fa-search"></i>
+          <i class="fa fa-search"></i>
         </button>
-    </div>
+      </div>
     </div>
   </form>
-  <%= link_to "Histórico de Buscas", sessions_show_path, class: 'history'%>
+  <%= link_to "Histórico de Buscas", sessions_show_path, class: 'history' %>
 </div>
 
 <script>
@@ -19,7 +19,7 @@
     event.preventDefault();
     var city = document.getElementById('city').value;
     var form = document.getElementById('weather-form');
-    form.action = '/weather/' + encodeURIComponent(city);
+    form.action = '/weather/' + encodeURIComponent(city);  // Define a ação do formulário
     form.submit();
   }
 </script>

@@ -9,7 +9,7 @@ class WeatherController < ApplicationController
 
   def show
     city = params[:city]
-    api_key = '757eaa52'
+    api_key = 'b6480f9c'
     response = self.class.get("/weather", query: { key: api_key, city_name: city })
     @weather = response.parsed_response['results']
     today = Date.today
