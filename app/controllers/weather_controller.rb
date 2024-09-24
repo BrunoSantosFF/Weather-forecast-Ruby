@@ -19,8 +19,8 @@ class WeatherController < ApplicationController
       'clear_day' => 'sun',
       'clear_night' => 'sun',
       'cloud' => 'wind',
-      'cloudly_day' => 'wind',
-      'cloudly_night' => 'wind',
+      'cloudly_day' => 'sun',
+      'cloudly_night' => 'sun',
       'rain' => 'rain',
       'storm' => 'storm',
       'snow' => 'snow',
@@ -32,7 +32,17 @@ class WeatherController < ApplicationController
 
     @condition = possible_conditions[@weather['condition_slug']]
 
+    SearchHistory.create(
+      user_id: session[:user_id],
+      city: city,
+      searched_at: Time.current
+    )
+
     # render json: @weather
+  end
+
+  def new
+
   end
 
   private

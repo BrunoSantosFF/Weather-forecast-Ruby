@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag 'search', media: 'all' %>
+
+<div class="search-container">
+  <form id="weather-form" action="<%= weather_path(city: '') %>" method="get" onsubmit="submitForm(event)">
+    <div class="field">
+      <div class="search-bar">
+        <input type="text" id="city" name="city" placeholder="Cidade">
+        <button type="submit" class="search-button">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+    </div>
+  </form>
+  <%= link_to "Histórico de Buscas", sessions_show_path, class: 'history'%>
+</div>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    var city = document.getElementById('city').value;
+    var form = document.getElementById('weather-form');
+    form.action = '/weather/' + encodeURIComponent(city);
+    form.submit();
+  }
+</script>

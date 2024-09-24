@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'history', media: 'all' %>
+
+<div class="s-container">
+    <h1>Bem-vindo, <%= @user.email %>!</h1>
+    <p>Você se cadastrou em: <%= @user.created_at.strftime("%d/%m/%Y") %></p>
+
+    <h2>Histórico de buscas</h2>
+    <% if @search_histories.any? %>
+        <ul class="history-list">
+            <% @search_histories.each do |search| %>
+                <li>
+                <span class="city"><%= search.city %></span>
+                <span class="searched-at"><%= search.searched_at.strftime("%d/%m/%Y %H:%M") %></span>
+                </li>
+            <% end %>
+        </ul>
+    <% else %>
+        <p>Você ainda não fez nenhuma busca.</p>
+    <% end %>
+</div>
+
+
