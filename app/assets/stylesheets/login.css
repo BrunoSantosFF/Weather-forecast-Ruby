@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 body {
-  margin: 0; 
-  padding: 0; 
-  height: 100%; 
-  width: 100%; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
   text-align: center;
-  margin: 20px 0;
-}
-
-.form-group {
-  margin-bottom: 15px;
+  margin: 10px 0;
+  color: #ffffa7;
 }
 
 .form-label {
@@ -23,63 +20,93 @@ h1 {
 .form-control {
   padding: 10px;
   border-radius: 5px;
-  width: 60%;
   float: right;
 }
 
-
-.btn {
-  width: 60%;
-  padding: 10px;
-  background-color: #94ae23;
-  color: white;
-  border: none;
-  border-radius: 5px;
-
+.form-group{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.btn:hover {
-  background-color: #9cb669;
+.form-group div{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  align-items: flex-start;
+}
+
+.form-group div label{
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffa7;
+}
+
+.form-group div input{
+  width: calc(100% - 40px);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fcf8b3;
+  border: 1px solid #f9f494 !important;
+}
+
+.form-group .div-btn .submit:hover {
+  background-color: #FADB51;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  background-image: url('praia3.gif'); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  height: 100vh; 
+  background-color: #ffffa7;
+  height: 100vh;
   width: 100%;
   margin: 0;
-  
 }
 
 .container-main {
-  
-  display: flex;
-  justify-content: center;
-  border: 1px solid rgb(225, 134, 43);
   border-radius: 8px;
-  width: 320px;
-  height: 320px;
-  background: rgba(0, 0, 0, 0.4); /* Fundo escuro com 40% de opacidade */
+  width: 900px;
+  height: 350px;
+  background-color: #ffa400;
+  box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.456);
+  background-image: url('praia3.gif');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding: 15px 5px;
 }
 
-.container-main div {
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.div-btn {
+.form-group .div-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: larger;
+}
+
+.form-group .div-btn .submit {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #fcf8b3;
+  border: 1px solid #f9f494 !important;
+}
+
+a {
+  color: #ffffa7;
 }
 
 /*Page users*/
 
 #users {
   max-height: 400px;
-  overflow-y: auto; 
-  border: 1px solid #ccc; 
-  padding: 5px; 
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
